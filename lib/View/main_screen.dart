@@ -83,15 +83,14 @@ class _MainScreenState extends State<MainScreen> {
                     child: AspectRatio(
                       aspectRatio: 1,
                       child: Stack(
+                        alignment: Alignment.center,
                         children: [
                           ChartWidget(sections: showingSections()),
                           Positioned(
-                            left: 105.w,
-                            top: 120.h,
-
                             child: Text(
-                              response.isNotEmpty ? "\$$total" : "\$0",
+                              response.isNotEmpty ? "\$ $total" : "\$ 0",
                               style: AppStyles.title.copyWith(fontSize: 20.sp),
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ],

@@ -55,9 +55,13 @@ class ItemCards extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    name,
-                    style: AppStyles.cardTitle.copyWith(fontSize: 25.sp),
+                  SizedBox(
+                    width: 150.w,
+                    child: Text(
+                      name,
+                      style: AppStyles.cardTitle.copyWith(fontSize: 25.sp),
+                      maxLines: 1,
+                    ),
                   ),
                   Text(
                     category,
